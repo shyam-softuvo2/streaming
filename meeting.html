@@ -11,7 +11,17 @@
       //Get URL query parameters
       const url = new URLSearchParams(window.location.search);
       const config = {
-        meetingId: url.get("meetingId"), // Get meeting id from params.
+        meetingId: url.get("meetingId"),
+        apiKey: "f0cbcd85-1619-48c5-95ec-02db7a5a4230",
+
+        name: "Demo User",
+        containerId: null,
+        micEnabled: true,
+        webcamEnabled: true,
+        participantCanToggleSelfWebcam: true,
+        participantCanToggleSelfMic: true,
+        chatEnabled: true,
+        screenShareEnabled: true,
       };
       const meeting = new VideoSDKMeeting();
       meeting.init(config);
